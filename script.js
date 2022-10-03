@@ -16,10 +16,21 @@ makeRow()
 const addRow = document.getElementById("add-row")
 addRow.addEventListener("click", function(){makeRow()})
 
-function colorize(){
-    console.log("clicked")
+td.className = 'green'
+
+function colorize(event){
+const target = event.target
+if (target.className.length)    {
+    target.className = ""   
+}   else{
+    target.className = 'green'
+}
 }
 
-document.getElementsByTagName("table").addEventListener("click", function(){
- colorize()
-})
+
+// const clickd = document.getElementsById("table")
+table.addEventListener("click", function(){colorize()})
+
+
+
+
