@@ -31,6 +31,14 @@ if (target.className.length)    {
 // const clickd = document.getElementsById("table")
 table.addEventListener("click", colorize)
 
+let colorSelect =""
 
-
+function getSelect(event){
+    // colorSelect = event.target.value
+  
+}
+const selection = document.getElementsByTagName("select")
+// console.log(select)
+selection.addEventListener("change",getSelect)
+console.log(event.target.value)
 
