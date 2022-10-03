@@ -1,5 +1,6 @@
 // Your code here
 const table= document.getElementsByTagName('table')[0]
+let currentColor = "green"
 
 function makeRow (){
     const row = document.createElement('tr')
@@ -20,12 +21,28 @@ addRow.addEventListener("click", function(){makeRow()})
 
 function colorize(event){
 const target = event.target
-if (target.className.length)    {
-    target.className = ""   
+
+
+if (target.tagName == "TD")   {
+if (target.className == currentColor)    {
+    target.className = ""  
 }   else{
-    target.className = 'green'
+    target.className = currentColor
 }
 }
+}
+
+function paintFill(){
+if (fillStatus = "Paint-fill: ON")  {
+
+    document.getElementsByClass("").classList.add(currentColor);
+
+}
+}
+
+
+
+
 
 
 // const clickd = document.getElementsById("table")
@@ -34,11 +51,15 @@ table.addEventListener("click", colorize)
 let colorSelect =""
 
 function getSelect(event){
-    // colorSelect = event.target.value
+    currentColor = event.target.value
+    
   
 }
-const selection = document.getElementsByTagName("select")
+const selection = document.getElementsByTagName("select")[0]
 // console.log(select)
 selection.addEventListener("change",getSelect)
-console.log(event.target.value)
+
+
+
+
 
